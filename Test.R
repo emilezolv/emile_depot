@@ -2,5 +2,4 @@
 ## VP 
 ##
 
-
-plot(1)
+plot(1, col='red', pch=16)
