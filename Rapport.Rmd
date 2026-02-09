@@ -1,0 +1,66 @@
+---
+title: "L'impact environnemental des cryptomonnaies"
+author: "PERRAUD Emile"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: '3'
+  html_document:
+    code_folding: hide
+    fig_caption: true
+    number_sections: true
+    toc: true
+    toc_depth: 3
+    toc_float:
+      collapsed: true
+      smooth_scroll: true
+bibliography: biblio/tyyy.bib
+csl: "biblio/isara-iso-690.csl"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(ade4)
+library(FactoMineR)
+```
+
+```{r logo, echo=FALSE, out.width = '30%', fig.align = "center", fig.cap="Fig. 1: Logo  Rmarkdown"}
+knitr::include_graphics("crypto.jpg")
+```
+
+# Contexte, qu’est ce que la crypto monnaie ?
+
+
+  Depuis la création du *Bitcoin* en 2009, les cryptomonnaies connaissent un véritable essor et ne sont pas prêtes de voir leur importance se réduire, car elles garantissent une plus grande autonomie. 
+Tout d’abord il faut expliquer ce que sont les cryptomonnaies, ce sont des monnaies numériques, c’est-à-dire non matérialisées dont le fonctionnement s’appuie sur un réseau informatique crypté et décentralisé (les blockchains) permettant des transactions entre les individus sans passer par une banque. C’est de l’argent que l’on peut s’échanger via internet et l’informatique sans jamais pouvoir y toucher physiquement, **les blockchains** permettent de garder l’historique de toutes les transactions numériques des différents individus.
+Le succès des cryptomonnaies est l’indépendance vis-à-vis des banques, les autres monnaies s’appuient sur des banques centrales et des institutions pour assurer leur fiabilité tandis que personne ne peut prendre le contrôle sur les cryptomonnaies. Le réseau des crypto-monnaies est assuré par **des blockchains** qui sont des technologies de stockage et de transmission des informations, ce sont de grosses bases de données avec une grande sécurité.[@ministere_de_leconomie_des_finances_et_de_la_souverainete_industrielle_et_numerique_quest-ce_2025] 
+
+Les cryptomonnaies sont de plus en plus utilisées et ont de plus en plus de valeurs, le Bitcoin est de loin la cryptomonnaie la plus populaire, 73% des mineurs sont basés en Chine malgré la volonté de cette dernière de l’interdire sur son territoire. L’activité est désormais principalement délocalisée aux Etats-Unis et au Kazakhstan [@delahaye_bitcoin_2024]
+
+# L’empreinte carbone du minage
+
+Selon le site vert.eco, le Bitcoin serait responsable de 95% des impacts environnementaux des cryptomonnaies [@Électricité, eau, {CO2} : pourquoi le {Bitcoin} est responsable de 95\% de l’impact environnemental des cryptomonnaies]. On mentionne notamment une énorme consommation énergétique due à ces serveurs et des énormes bases de données avec une consommation dépassant beaucoup de pays, avec par exemple les Pays-bas ou l’Argentine. A cela faut ajouter une grosse consommation en eau pour refroidir ses différentes bases de données. Elle atteint 155 TWh par an à 172 TWh par an (ou encore 162 TWh par an selon le Cambridge Centre for Alternative Finance) selon les estimations existantes. 
+L’université de Cambridge a créé un index qui calcule en temps et en heure la consommation énergétique du bitcoin, 19.33GW estimés au 05/02
+Elle montre, à l’aide d’interprétations graphiques que les consommations ont plus que doublé en 6 ans entre 2020 et 2026 [@noauthor_cambridge_nodate] 
+
+
+# Les alternatives et solutions
+
+L’ADAN relève sur son site les différentes cryptomonnaies les plus connues ainsi que leur consommation moyenne et souligne qu’il existe des alternatives dont leur consommation est négligeable telles que Binance Smart Chai, (BNB) ou Solana (SOL) pour ne citer qu’elles. [@noauthor_protocoles_2021] L’ADAN est l’Association pour le Développement des Actifs Numériques. C'est une association professionnelle française créée en 2020 qui représente l'industrie des cryptomonnaies et de la blockchain en France.
+Pour qu’un bloc de transactions soit validé et ajouté à la blockchain, les mineurs doivent résoudre une équation mathématique complexe
+
+
+
+# Bibliographie
+
+
+
+## Liens
+
+ISARA : <https://isaranet.fr/> consulté le ...
+
+## Bibliographie
+
+Liste des publications :
