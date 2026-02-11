@@ -15,7 +15,7 @@ output:
     toc_float:
       collapsed: true
       smooth_scroll: true
-bibliography: biblio/tyyy.bib
+bibliography: biblio/Rmarkdown.bib
 csl: "biblio/isara-iso-690.csl"
 ---
 
@@ -41,16 +41,37 @@ Les cryptomonnaies sont de plus en plus utilisées et ont de plus en plus de val
 
 # L’empreinte carbone du minage
 
-Selon le site vert.eco, le Bitcoin serait responsable de 95% des impacts environnementaux des cryptomonnaies [@Électricité, eau, {CO2} : pourquoi le {Bitcoin} est responsable de 95\% de l’impact environnemental des cryptomonnaies]. On mentionne notamment une énorme consommation énergétique due à ces serveurs et des énormes bases de données avec une consommation dépassant beaucoup de pays, avec par exemple les Pays-bas ou l’Argentine. A cela faut ajouter une grosse consommation en eau pour refroidir ses différentes bases de données. Elle atteint 155 TWh par an à 172 TWh par an (ou encore 162 TWh par an selon le Cambridge Centre for Alternative Finance) selon les estimations existantes. 
+Selon le site vert.eco, le Bitcoin serait responsable de 95% des impacts environnementaux des cryptomonnaies [@allard_electricite_2025]. On mentionne notamment une énorme consommation énergétique due à ces serveurs et des énormes bases de données avec une consommation dépassant beaucoup de pays, avec par exemple les Pays-bas ou l’Argentine. A cela faut ajouter une grosse consommation en eau pour refroidir ses différentes bases de données. Elle atteint 155 TWh par an à 172 TWh par an (ou encore 162 TWh par an selon le Cambridge Centre for Alternative Finance) selon les estimations existantes. 
 L’université de Cambridge a créé un index qui calcule en temps et en heure la consommation énergétique du bitcoin, 19.33GW estimés au 05/02
 Elle montre, à l’aide d’interprétations graphiques que les consommations ont plus que doublé en 6 ans entre 2020 et 2026 [@noauthor_cambridge_nodate] 
 
+```{r evolution-bitcoin, echo=FALSE, fig.cap="Évolution de la consommation énergétique du Bitcoin (2017-2026)", fig.width=10, fig.height=6}
+library(ggplot2)
+
+#évolution de la consommation du bitcoin des dernières années
+evolution <- data.frame(
+  Annee = c(2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026),
+  Consommation_TWh = c(30, 45, 70, 77, 130, 150, 138, 145, 155, 162)
+)
+
+ggplot(evolution, aes(x = Annee, y = Consommation_TWh)) +
+  geom_line(color = "#F7931A", linewidth = 1.2) +
+  geom_point(color = "#F7931A", size = 3) +
+  geom_area(fill = "#F7931A", alpha = 0.3) +
+  labs(title = "Évolution de la consommation énergétique du Bitcoin",
+       x = "Année",
+       y = "Consommation (TWh/an)") +
+  theme_minimal() +
+  scale_x_continuous(breaks = seq(2017, 2026, 1))
+```
 
 # Les alternatives et solutions
 
 L’ADAN relève sur son site les différentes cryptomonnaies les plus connues ainsi que leur consommation moyenne et souligne qu’il existe des alternatives dont leur consommation est négligeable telles que Binance Smart Chai, (BNB) ou Solana (SOL) pour ne citer qu’elles. [@noauthor_protocoles_2021] L’ADAN est l’Association pour le Développement des Actifs Numériques. C'est une association professionnelle française créée en 2020 qui représente l'industrie des cryptomonnaies et de la blockchain en France.
 Pour qu’un bloc de transactions soit validé et ajouté à la blockchain, les mineurs doivent résoudre une équation mathématique complexe
 
+En Septembre 2022, Ethereum a changé de mode de fonctionnement en passant du Proof of Work au Proof of Stake ce qui a considérablement baissé sa consommation de 99% selon un article de l’université de Cornell [@kapengut_event_2023]
+Pour comprendre ce que sont le Proof of Work et le Proof of Stake, le site kraken qui est une plateforme d’échange de cryptomonnaie, explique la différence des deux méthodes : Le mécanisme de consensus Proof-of-Work exige des utilisateurs du réseau, appelés des "mineurs", qu’ils consacrent leur puissance de calcul à la réalisation d’une tâche Contrairement à la vive concurrence qui s’applique au Proof-of-Work, le Proof-of-Stake utilise un autre ensemble d’incitations pour s’assurer que les participants au réseau se comportent honnêtement. Avec le Proof-of-Stake (PoS), les participants au réseau achètent et verrouillent les tokens natifs d’un protocole pour valider de nouveaux blocs de transactions. En contrepartie, ils peuvent recevoir des récompenses de staking [@kraken_proof--work_2024]
 
 
 # Bibliographie
